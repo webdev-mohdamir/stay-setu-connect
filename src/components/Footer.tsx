@@ -1,10 +1,16 @@
-
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone } from "lucide-react";
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Mail,
+  Phone,
+} from "lucide-react";
 
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    element?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -20,7 +26,8 @@ const Footer = () => {
               <span className="text-xl font-bold">StaySetu</span>
             </div>
             <p className="text-gray-400 leading-relaxed">
-              Your trusted partner for hotel OTA listings. We help properties reach global guests through top booking platforms.
+              Your trusted partner for hotel OTA listings. We help properties
+              reach global guests through top booking platforms.
             </p>
             <div className="flex space-x-4">
               <Facebook className="h-5 w-5 text-gray-400 hover:text-orange-500 cursor-pointer transition-colors" />
@@ -35,32 +42,32 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <button 
-                  onClick={() => scrollToSection('home')}
+                <button
+                  onClick={() => scrollToSection("home")}
                   className="text-gray-400 hover:text-orange-500 transition-colors"
                 >
                   Home
                 </button>
               </li>
               <li>
-                <button 
-                  onClick={() => scrollToSection('services')}
+                <button
+                  onClick={() => scrollToSection("services")}
                   className="text-gray-400 hover:text-orange-500 transition-colors"
                 >
                   Services
                 </button>
               </li>
               <li>
-                <button 
-                  onClick={() => scrollToSection('about')}
+                <button
+                  onClick={() => scrollToSection("about")}
                   className="text-gray-400 hover:text-orange-500 transition-colors"
                 >
                   About Us
                 </button>
               </li>
               <li>
-                <button 
-                  onClick={() => scrollToSection('pricing')}
+                <button
+                  onClick={() => scrollToSection("pricing")}
                   className="text-gray-400 hover:text-orange-500 transition-colors"
                 >
                   Pricing
@@ -88,11 +95,18 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center">
                 <Phone className="h-4 w-4 text-orange-500 mr-3" />
-                <span className="text-gray-400">+91-XXXXXXXXXX</span>
+                <a href="tel:+918447127110" className="text-gray-400">
+                  +91 8447127110
+                </a>
               </div>
               <div className="flex items-center">
                 <Mail className="h-4 w-4 text-orange-500 mr-3" />
-                <span className="text-gray-400">contact@staysetu.com</span>
+                <a
+                  href="mailto:harshitmehra.mail@gmail.com"
+                  className="text-gray-400"
+                >
+                  harshitmehra.mail@gmail.com
+                </a>
               </div>
               <div className="text-gray-400">
                 <p>StaySetu Solutions</p>
@@ -109,13 +123,22 @@ const Footer = () => {
               © 2024 StaySetu. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-orange-500 transition-colors"
+              >
                 Privacy Policy
               </a>
-              <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-orange-500 transition-colors"
+              >
                 Terms of Service
               </a>
-              <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-orange-500 transition-colors"
+              >
                 FAQ
               </a>
             </div>
