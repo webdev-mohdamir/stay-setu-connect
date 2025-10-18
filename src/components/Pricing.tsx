@@ -52,7 +52,7 @@ const Pricing = () => {
   const oneTimeServices = [
     {
       name: "Basic Setup",
-      price: "₹4,000",
+      price: "₹5,000",
       description: "One-time setup on up to All OTAs",
       permonth: false,
       features: [
@@ -172,7 +172,7 @@ const Pricing = () => {
                     {service.price}
                   </div>
                   <div className="text-sm text-gray-600">
-                    {service.permonth ? "per month" : "one-time"}
+                    {service.permonth ? "Quarterly" : "one-time"}
                   </div>
                 </div>
 
