@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 import { Check, Star } from "lucide-react";
 
 const Pricing = () => {
@@ -64,8 +65,8 @@ const Pricing = () => {
       ],
     },
     {
-      name: "Advanced Setup",
-      price: "₹15,000 ",
+      name: "Revenue Management",
+      price: "₹15,000",
       permonth: true,
       description: "Complete setup with revenue management",
       features: [
@@ -80,6 +81,11 @@ const Pricing = () => {
   const scrollToContact = () => {
     const element = document.getElementById("contact");
     element?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleWhatsapp = () => {
+    const url = "https://wa.me/+919311813989";
+    window.open(url, "_blank");
   };
 
   return (
@@ -168,10 +174,20 @@ const Pricing = () => {
                     {service.name}
                   </h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
-                  <div className="text-3xl font-bold text-orange-500">
+                  <div
+                    className={cn(
+                      "text-3xl font-bold text-orange-500",
+                      index === 0 ? "" : "hidden"
+                    )}
+                  >
                     {service.price}
                   </div>
-                  <div className="text-sm text-gray-600">
+                  <div
+                    className={cn(
+                      "text-sm text-gray-600",
+                      index === 0 ? "" : "hidden"
+                    )}
+                  >
                     {service.permonth ? "Quarterly" : "one-time"}
                   </div>
                 </div>
@@ -185,12 +201,22 @@ const Pricing = () => {
                   ))}
                 </ul>
 
-                <Button
-                  onClick={scrollToContact}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white"
-                >
-                  Choose Plan
-                </Button>
+                {index === 0 && (
+                  <Button
+                    onClick={scrollToContact}
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                  >
+                    Choose Plan
+                  </Button>
+                )}
+                {index === 1 && (
+                  <Button
+                    onClick={handleWhatsapp}
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                  >
+                    Contact Us to get a Quote
+                  </Button>
+                )}
               </Card>
             ))}
           </div>
